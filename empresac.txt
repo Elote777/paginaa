@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa</title>
+    <style>
+        body {
+            background-color: #f5dce8; /* Color rosa pastel */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #header {
+            background-color: #6a5acd; /* Color morado */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        #container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .img-container {
+            margin-bottom: 20px;
+        }
+        .img-container img {
+            width: 400px; /* Ancho de las imágenes */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        #regresar-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #6a5acd; /* Color morado */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <h1>EMPRESA</h1>
+</div>
+
+<div id="container">
+    <div class="img-container">
+        <p>PRESENTACION DE LA EMPRESA KITTYS CANDY'S</p>
+        <img src="prese.jpg" alt=>
+    </div>
+<div class="img-container">
+        <p>FILOSOFIA MISION Y VISION</p>
+        <img src="filos.jpg" alt=>
+    </div>
+    <div class="img-container">
+        <p>MANUAL DE LA EMPRESA</p>
+        <img src="manual.jpg" alt=>
+    </div>
+    <div class="img-container">
+        <p>DIAGRAMA DE FLUJO</p>
+        <img src="diagrama.jpg" alt=>
+    </div>
+    <div class="img-container">
+        <p>OBJETIVOS</p>
+        <img src="objet.jpg" alt=>
+    </div>
+    <div class="img-container">
+        <p>ORGANIGRAMA </p>
+        <img src="orga.jpg" alt=>
+    </div>
+<div class="img-container">
+        <p>PRESENTACION DE INTEGRANTES</p>
+        <img src="presenta.jpg" alt=>
+    </div>
+<div class="img-container">
+        <p>GRAFICA DE GANTT</p>
+        <img src="gantt.jpg" alt=>
+    </div>
+</div>
+
+<a href="index.html" id="regresar-btn">Regresar</a>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de inicio </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #D8BFD8; /* Color morado pastel */
+            padding: 20px 0; /* Aumenta el tamaño del menú */
+        }
+        .menu a {
+            color: white;
+            padding: 16px 24px; /* Aumenta el tamaño del padding para hacer el menú más grande */
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px; /* Aumenta el tamaño de la fuente */
+            display: block;
+        }
+        .menu a:hover {
+            background-color: #C8A2C8; /* Color un poco más oscuro para el hover */
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            background-color: #FFD1DC; /* Color rosa pastel */
+        }
+        .content img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .active {
+            display: block;
+        }
+        .footer-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer-button:hover {
+            background-color: #3700b3;
+        }
+    </style>
+    <script>
+        function showContent(id) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="menu">
+        <a href="#" onclick="showContent('mision')">Mision</a>
+        <a href="#" onclick="showContent('vision')">Vision</a>
+        <a href="#" onclick="showContent('filosofia')">Filosofia</a>
+        <a href="#" onclick="showContent('objetivo')">Objetivo</a>
+    </div>
+
+    <div id="mision" class="content active">
+        <h1>Mision</h1>
+        <img src="mision.jpg" alt="Imagen Mision">
+        <p>Nuestra mision es tener variedad de productos y que nuestra
+sucursal/empresa sea mas conocida.</p>
+    </div>
+
+    <div id="vision" class="content">
+        <h1>vision.jpg</h1>
+        <img src="vision.jpg" alt="Imagen Vision">
+        <p>Nuestra vision es expandir las sucursales y tener socios
+grandes donde el crecimiento sea mutuo, agrandar nuestro inventario
+de productos, tener revendedores de nuestro producto.</p>
+    </div>
+
+    <div id="filosofia" class="content">
+        <h1>filosofia</h1>
+        <img src="filosofia.jpg" alt="Imagen Filosofia">
+        <p>Nuestra filosofia es la primordial prioridad es mejorar
+y las expectativas de nuestros clientes.</p>
+    </div>
+
+    <div id="objetivo" class="content">
+        <h1>Objetivo</h1>
+        <img src="objetivo.jpg" alt="Imagen Objetivo">
+        <p>La empresa sera una confiteria de una magnitud no tan grande, dirigida a 
+         publico general, el personal estara capacitado y seguiremos las 
+         normas de higiene, tendremos publicidad en distintos lugares, contar 
+         con productores de la mas alta calidad y contar con variedad de producto sin 
+          olvidar satisfacer el cliente.</p>
+    </div>
+
+    <a href="index.html" class="footer-button">Regresar al inicio</a>
+</body>
+</html>

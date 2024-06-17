@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMACION GENERAL</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            width: 100%;
+            padding: 20px;
+            background-color: #D8BFD8; /* Color morado pastel */
+            color: white;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .container {
+            display: flex;
+            margin-top: 80px; /* Espacio para el encabezado */
+        }
+        .menu {
+            width: 200px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            height: calc(100vh - 80px); /* Ajuste para el encabezado */
+            position: fixed;
+            top: 80px; /* Ajuste para el encabezado */
+            left: 0;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .menu ul li {
+            margin: 10px 0;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+        .menu ul li a:hover {
+            background-color: #ccc;
+        }
+        .content {
+            flex-grow: 1;
+            margin-left: 220px; /* Espacio para el menú */
+            padding: 20px;
+            text-align: center;
+        }
+        .content img {
+            max-width: 40%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showContent(id) {
+            // Ocultar todas las secciones de contenido
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            // Mostrar la sección de contenido seleccionada
+            document.getElementById(id).classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h2>INFORMACION   GENERAL</h2>
+    </div>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="#" onclick="showContent('emsad')">EMSAD</a></li>
+                <li><a href="#" onclick="showContent('descripcion')">Descripcion General</a></li>
+                <li><a href="index.html">Regresar</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="emsad" class="content-section hidden">
+                <h3>EMSAD</h3>
+                <p>Directivo Jose Rolando Jimenez Romano Responsable del Centro Horario de atencion : LUN-VIER 8:00-13:00 HRS
+Correo Electronico:emsadyauhquemecan@cecytlax.edu.mx Direccion Av. Juarez S/N, Primera Seccion, Barrio La Magdalena Tepepa, San Dionisio Yauhquemehcan, Tlax.</p>
+                <img src="emsad.jpg" alt="Imagen de EMSAD">
+            </div>
+            <div id="descripcion" class="content-section hidden">
+                <h3>DESCRIPCION GENERAL </h3>
+                <p>¿QUE OFRECEMOS?</p>
+                  <p> En KITTY'S CANDYS, nos especializamos en gomitas enchiladas, combinando las mejores gomitas de frutas con una mezcla unica de chiles y especias                         que les da ese toque picosito que tanto te gusta. Cada gomita es preparada con cuidado y pasion para asegurar la maxima frescura y sabor en cada                        bocado.</p>
+                   <p>EXPERIENCIA UNICA</p>
+                  <p> En KITTY'S CANDYS, no solo vendemos gomitas, sino que también ofrecemos una experiencia unica para nuestros clientes. Desde el momento en que                           entras a nuestra tienda, seras recibido por un ambiente acogedor y vibrante, lleno de aromas que despertarán tus sentidos. Nuestro personal amable y                    conocedor esta siempre dispuesto a ayudarte a encontrar tus gomitas favoritas y a recomendarte nuevas combinaciones para probar.</p>
+                   <p>VEN A VISITARNOS</p>
+                  <p> Te invitamos a visitar nuestra tienda y descubrir por qué KITTY'S CANDYS es el destino preferido para todos los amantes de las gomitas enchiladas.                      Ya sea que busques un antojo rapido o quieras llevar un regalo original y delicioso, tenemos justo lo que necesitas.</p>
+                <img src="ruta_a_tu_imagen_descripcion.jpg" alt="Imagen descriptiva">
+            </div>
+        </div>
+    </div>
+    <script>
+        // Mostrar el primer contenido por defecto
+        showContent('emsad');
+    </script>
+</body>
+</html>
